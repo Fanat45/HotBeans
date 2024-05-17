@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" text="text/css" href="Css files/navbarhome.css">
+</head>
+<body>
+  <h1> 
+    Hotbeans
+  </h1>
+  <div class="navbar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="Current Employees.html">Current Employees</a></li>
+      <li><a href="Available positions.html">Available positions</a></li>
+      <li><a href="Contact.html">Job application</a></li>
+    </ul>
+  </div>
+  
+  <div class="slider">
+    <div class="imageshop">
+    <img src="Assets/moving Assets/moving1.jfif" alt="asset1" >
+    <img src="Assets/moving Assets/moving2.jfif" alt="asset2" >
+    <img src="Assets/moving Assets/moving3.jfif" alt="asset3" >
+  </div>
+</div>
+ 
+<script>
+  
+  const slider = document.querySelector('.slider');
+  const imageshop = document.querySelector('.imageshop');
+const images = document.querySelectorAll('.imageshop img');
+
+let imageIndex = 0;
+const imageWidth = images[0].clientWidth;
+
+function slideImage() {
+  imageshop.style.transform = `translateX(${-imageIndex * imageWidth}px)`;
+}
+
+function nextImage() {
+  imageIndex++;
+  if (imageIndex > images.length - 1) {
+    imageIndex = 0;
+  }
+  slideImage();
+}
+
+function previousImage() {
+  imageIndex--;
+  if (imageIndex < 0) {
+    imageIndex = images.length - 1;
+  }
+  slideImage();
+}
+
+setInterval(nextImage, 3000);
+
+</script>
+
+
+
+<div class="albumcovers">
+  
+  <div>
+  <img src="Assets/building.jfif" alt="example" class="photo">
+  <div class="example2 ">Welcome to Hot Beаns Web - the place where your web development ambitions become a reality!
+    We аre happy to welcome you to our innovative portаl, designed for those who strive for professional growth in web development. Why exactly Hot Beаns Web? Let us tell you.
+   On our Compаny Profile page, you'll find our values, mission and work philosophy. We pride ourselves on a friendly teаm filled with creative energy and a commitment to continuous improvement.
+   </div>
+  
+  </div>
+  
+  <div>
+  <img src="Assets/itpersons.jfif" alt="example2" class="photo">
+  <div class="example">example2 </div>
+  
+  </div>
+
+</div>
+
+  <footer>
+    this is example of future footer
+  </footer>
+
+</body>
+</html>

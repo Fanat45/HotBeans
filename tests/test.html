@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мой сайт</title>
+  <style>
+    /* Стили для аккордеона */
+    .accordion {
+      margin-top: 20px;
+    }
+
+    .accordion-item {
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+
+    .accordion-item.active {
+      font-weight: bold;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Список регионов с использованием аккордеона -->
+  <div class="accordion">
+    <div class="accordion-item" onclick="toggleAccordion(event)">
+      Регион 1
+      <div class="accordion-content">
+        <p>Содержимое для Региона 1</p>
+      </div>
+    </div>
+    <div class="accordion-item" onclick="toggleAccordion(event)">
+      Регион 2
+      <div class="accordion-content">
+        <p>Содержимое для Региона 2</p>
+      </div>
+    </div>
+    <div class="accordion-item" onclick="toggleAccordion(event)">
+      Регион 3
+      <div class="accordion-content">
+        <p>Содержимое для Региона 3</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Функция для открытия/закрытия аккордеона
+    function toggleAccordion(event) {
+      // Получаем аккордеонный элемент, на котором был сделан клик
+      var accordionItem = event.target;
+
+      // Если клик был сделан на содержимом аккордеона, переходим к родительскому элементу
+      if (!accordionItem.classList.contains('accordion-item')) {
+        accordionItem = accordionItem.parentNode;
+      }
+
+      // Добавляем/удаляем класс 'active' у аккордеона
+      accordionItem.classList.toggle('active');
+
+      // Получаем содержимое аккордеона
+      var accordionContent = accordionItem.querySelector('.accordion-content');
+
+      // Отображаем/скрываем содержимое аккордеона
+      if (accordionContent.style.display === 'block') {
+        accordionContent.style.display = 'none';
+      } else {
+        accordionContent.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

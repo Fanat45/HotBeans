@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 0 10px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin: 0 80px; 
+    font-size: 18px;
+  }
+
+  .navbar a:hover {
+    background-color: white;
+  }
+
+  .navbar a.active {
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    padding: 15px;
+  }
+
+    
+  footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+  }
+  /* Styles for footer include margin-top: auto;, which makes the top footer 
+  indentation automatic and causes it to be pressed to the bottom of the page */
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  /* The code min-height: 100vh; specifies that <body> must be at least as high as the browser window (visible area). */
+
+  .slider {
+    height: 300px;
+    margin: 0 auto;
+    max-width: 400px;
+    overflow: hidden;
+    display: flex;
+   
+}
+
+.imageshop {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+}
+
+.imageshop img{
+   width: 400px;
+   height: auto;
+  }
+
+  .albumcovers {
+    display: flex;
+  }
+
+  .photo {
+    width: 230px;
+    height: auto;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+
+  .albuminfo {
+    text-align: center;
+  }
+
+  .albuminfo2ndline {
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;  
+  }
